@@ -1,0 +1,81 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Système de Réservation</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <h1>Système de Réservation</h1>
+            <div class="nav-links" id="navLinks">
+                <button id="loginBtn" class="nav-link active">Connexion</button>
+                <button id="registerBtn" class="nav-link">Inscription</button>
+                <button id="appointmentBtn" class="nav-link hidden">Rendez-vous</button>
+                <button id="profileBtn" class="nav-link hidden">Profil</button>
+                <button id="logoutBtn" class="nav-link hidden">Déconnexion</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Formulaire de connexion -->
+        <div id="loginForm" class="form-container">
+            <h2>Connexion</h2>
+            <form id="loginFormElement">
+                <input type="email" id="loginEmail" placeholder="Email" required>
+                <input type="password" id="loginPassword" placeholder="Mot de passe" required>
+                <button type="submit">Se connecter</button>
+            </form>
+        </div>
+
+        <!-- Formulaire d'inscription -->
+        <div id="registerForm" class="form-container hidden">
+            <h2>Inscription</h2>
+            <form id="registerFormElement">
+                <input type="text" id="firstname" placeholder="Prénom" required>
+                <input type="text" id="lastname" placeholder="Nom" required>
+                <input type="date" id="birthdate" required>
+                <textarea id="address" placeholder="Adresse" required></textarea>
+                <input type="tel" id="phone" placeholder="Téléphone" required>
+                <input type="email" id="registerEmail" placeholder="Email" required>
+                <input type="password" id="registerPassword" placeholder="Mot de passe" required>
+                <button type="submit">S'inscrire</button>
+            </form>
+        </div>
+
+        <!-- Section des rendez-vous -->
+        <div id="appointmentSection" class="hidden">
+            <div class="calendar-container">
+                <h2>Prendre un rendez-vous</h2>
+                <div id="calendar"></div>
+                <div id="timeSlots" class="time-slots"></div>
+            </div>
+            <div class="appointments-list">
+                <h2>Mes rendez-vous</h2>
+                <div id="appointmentsList"></div>
+            </div>
+        </div>
+
+        <!-- Section profil -->
+        <div id="profileSection" class="form-container hidden">
+            <h2>Mon Profil</h2>
+            <form id="profileFormElement">
+                <input type="text" id="profileFirstname" placeholder="Prénom" required>
+                <input type="text" id="profileLastname" placeholder="Nom" required>
+                <input type="date" id="profileBirthdate" required>
+                <textarea id="profileAddress" placeholder="Adresse" required></textarea>
+                <input type="tel" id="profilePhone" placeholder="Téléphone" required>
+                <input type="email" id="profileEmail" placeholder="Email" required>
+                <button type="submit">Mettre à jour</button>
+                <button type="button" id="deleteAccount" class="danger">Supprimer mon compte</button>
+            </form>
+        </div>
+    </main>
+
+    <div id="notification" class="notification hidden"></div>
+</body>
+</html>
